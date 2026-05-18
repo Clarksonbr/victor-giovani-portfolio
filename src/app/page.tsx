@@ -88,7 +88,7 @@ const projects = [
     problem:
       "Automações ficam espalhadas entre ferramentas, scripts e anotações, dificultando manutenção e testes.",
     description:
-      "Central simples para documentar, acompanhar e testar automações com IA, webhooks e integrações.",
+      "Central operacional para pequenas empresas documentarem, acompanharem e testarem automações internas. O projeto demonstra CRUD de automações, dashboard operacional, filtros, logs simulados, checklist de testes, webhooks simulados, persistência local com localStorage e IA mock para análise de riscos e melhorias.",
     features: [
       "Catálogo de automações",
       "Documentação de fluxos e webhooks",
@@ -96,11 +96,11 @@ const projects = [
     ],
     demonstrates:
       "Demonstra pensamento de integração, documentação técnica, APIs, webhooks e organização de processos automatizados.",
-    status: "Planejado",
-    stack: ["Next.js", "n8n", "APIs", "IA"],
-    githubUrl: "",
-    deployUrl: "",
-    featured: false
+    status: "MVP publicado",
+    stack: ["Next.js", "TypeScript", "localStorage", "IA mock"],
+    githubUrl: "https://github.com/Clarksonbr/ai-automation-hub",
+    deployUrl: "https://ai-automation-hub-pi.vercel.app/",
+    featured: true
   }
 ];
 
