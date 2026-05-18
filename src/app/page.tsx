@@ -249,7 +249,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-teal-300">
-            Solucao
+            Solução
           </p>
           <p className="leading-7 text-slate-300">{project.description}</p>
         </div>
