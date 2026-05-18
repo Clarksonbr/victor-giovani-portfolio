@@ -50,7 +50,7 @@ const projects = [
     problem:
       "Pequenos negócios e criadores perdem tempo transformando ideias soltas em posts, legendas e chamadas consistentes.",
     description:
-      "Sistema para gerar posts, legendas, ideias de arte e CTAs com IA, organizado por cliente, segmento e tom de voz.",
+      "Aplicação web para social medias e pequenas empresas criarem briefings, legendas, ideias de arte, CTAs, hashtags e variações para stories com um fluxo AI-first. A primeira versão usa geração mock estruturada, preparada para futura integração com API real.",
     features: [
       "Cadastro de clientes e segmentos",
       "Geração de ideias, legendas e CTAs",
@@ -58,8 +58,11 @@ const projects = [
     ],
     demonstrates:
       "Demonstra uso de Next.js, modelagem simples de produto, prompts aplicados e organização de conteúdo por contexto.",
-    status: "Em desenvolvimento",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Supabase", "IA"]
+    status: "MVP publicado",
+    stack: ["Next.js", "TypeScript", "Tailwind", "IA"],
+    githubUrl: "https://github.com/Clarksonbr/ai-social-media-studio",
+    deployUrl: "https://ai-social-media-studio.vercel.app/",
+    featured: true
   },
   {
     title: "AI CRM",
@@ -75,7 +78,10 @@ const projects = [
     demonstrates:
       "Demonstra CRUD, organização de dados, estados de negócio e uso de IA para apoiar comunicação comercial.",
     status: "Planejado",
-    stack: ["Next.js", "Supabase", "TypeScript", "IA"]
+    stack: ["Next.js", "Supabase", "TypeScript", "IA"],
+    githubUrl: "",
+    deployUrl: "",
+    featured: false
   },
   {
     title: "AI Automation Hub",
@@ -91,7 +97,10 @@ const projects = [
     demonstrates:
       "Demonstra pensamento de integração, documentação técnica, APIs, webhooks e organização de processos automatizados.",
     status: "Planejado",
-    stack: ["Next.js", "n8n", "APIs", "IA"]
+    stack: ["Next.js", "n8n", "APIs", "IA"],
+    githubUrl: "",
+    deployUrl: "",
+    featured: false
   }
 ];
 
@@ -216,7 +225,13 @@ function Pill({ children }: { children: React.ReactNode }) {
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
-    <article className="flex h-full flex-col rounded-lg border border-line bg-slate-950/42 p-6 shadow-soft">
+    <article
+      className={`flex h-full flex-col rounded-lg border p-6 shadow-soft ${
+        project.featured
+          ? "border-teal-300/45 bg-teal-300/[0.06]"
+          : "border-line bg-slate-950/42"
+      }`}
+    >
       <div className="mb-5 flex items-start justify-between gap-4">
         <h3 className="text-xl font-semibold text-white">{project.title}</h3>
         <span className="shrink-0 rounded-md border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-semibold text-cyan-200">
@@ -273,18 +288,40 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       </div>
 
       <div className="mt-6 grid grid-cols-2 gap-3">
-        <button
-          className="min-h-10 cursor-not-allowed rounded-md border border-slate-700 bg-slate-900 px-3 text-sm font-semibold text-slate-500"
-          disabled
-        >
-          GitHub em breve
-        </button>
-        <button
-          className="min-h-10 cursor-not-allowed rounded-md border border-slate-700 bg-slate-900 px-3 text-sm font-semibold text-slate-500"
-          disabled
-        >
-          Deploy em breve
-        </button>
+        {project.githubUrl ? (
+          <a
+            className="inline-flex min-h-10 items-center justify-center rounded-md border border-slate-600/70 bg-white/5 px-3 text-sm font-semibold text-slate-100 transition hover:border-slate-400 hover:bg-white/10"
+            href={project.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        ) : (
+          <button
+            className="min-h-10 cursor-not-allowed rounded-md border border-slate-700 bg-slate-900 px-3 text-sm font-semibold text-slate-500"
+            disabled
+          >
+            GitHub em breve
+          </button>
+        )}
+        {project.deployUrl ? (
+          <a
+            className="inline-flex min-h-10 items-center justify-center rounded-md border border-teal-300/60 bg-teal-300 px-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-200"
+            href={project.deployUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver deploy
+          </a>
+        ) : (
+          <button
+            className="min-h-10 cursor-not-allowed rounded-md border border-slate-700 bg-slate-900 px-3 text-sm font-semibold text-slate-500"
+            disabled
+          >
+            Deploy em breve
+          </button>
+        )}
       </div>
     </article>
   );
