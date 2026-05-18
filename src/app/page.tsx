@@ -69,7 +69,7 @@ const projects = [
     problem:
       "Pequenas empresas precisam acompanhar clientes e próximas ações sem depender de planilhas confusas.",
     description:
-      "Mini CRM para controlar clientes, status, próximas ações e mensagens sugeridas por IA.",
+      "Mini CRM para pequenas empresas organizarem clientes, status de atendimento, próximas ações, filtros e mensagens sugeridas com IA simulada. O projeto demonstra CRUD, dashboard, persistência local com localStorage, filtros e lógica de negócio.",
     features: [
       "Lista de clientes por status",
       "Registro de próximas ações",
@@ -77,11 +77,11 @@ const projects = [
     ],
     demonstrates:
       "Demonstra CRUD, organização de dados, estados de negócio e uso de IA para apoiar comunicação comercial.",
-    status: "Planejado",
+    status: "MVP publicado",
     stack: ["Next.js", "Supabase", "TypeScript", "IA"],
-    githubUrl: "",
-    deployUrl: "",
-    featured: false
+    githubUrl: "https://github.com/Clarksonbr/ai-crm",
+    deployUrl: "https://ai-crm-ebon.vercel.app/",
+    featured: true
   },
   {
     title: "AI Automation Hub",
