@@ -78,7 +78,7 @@ const projects = [
     demonstrates:
       "Demonstra CRUD, organização de dados, estados de negócio e uso de IA para apoiar comunicação comercial.",
     status: "MVP publicado",
-    stack: ["Next.js", "Supabase", "TypeScript", "IA"],
+    stack: ["Next.js", "localStorage", "TypeScript", "IA"],
     githubUrl: "https://github.com/Clarksonbr/ai-crm",
     deployUrl: "https://ai-crm-ebon.vercel.app/",
     featured: true
