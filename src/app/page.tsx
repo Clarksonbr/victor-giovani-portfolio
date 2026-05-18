@@ -59,7 +59,7 @@ const projects = [
     demonstrates:
       "Demonstra uso de Next.js, modelagem simples de produto, prompts aplicados e organização de conteúdo por contexto.",
     status: "MVP publicado",
-    stack: ["Next.js", "TypeScript", "Tailwind", "IA"],
+    stack: ["Next.js", "TypeScript", "Tailwind", "IA mock"],
     githubUrl: "https://github.com/Clarksonbr/ai-social-media-studio",
     deployUrl: "https://ai-social-media-studio.vercel.app/",
     featured: true
@@ -78,7 +78,7 @@ const projects = [
     demonstrates:
       "Demonstra CRUD, organização de dados, estados de negócio e uso de IA para apoiar comunicação comercial.",
     status: "MVP publicado",
-    stack: ["Next.js", "localStorage", "TypeScript", "IA"],
+    stack: ["Next.js", "TypeScript", "localStorage", "IA mock"],
     githubUrl: "https://github.com/Clarksonbr/ai-crm",
     deployUrl: "https://ai-crm-ebon.vercel.app/",
     featured: true
@@ -95,7 +95,7 @@ const projects = [
       "Checklist de testes e manutenção"
     ],
     demonstrates:
-      "Demonstra pensamento de integração, documentação técnica, APIs, webhooks e organização de processos automatizados.",
+      "Demonstra organização de processos, pensamento de integração, documentação técnica, simulação de webhooks, logs operacionais e análise com IA mock.",
     status: "MVP publicado",
     stack: ["Next.js", "TypeScript", "localStorage", "IA mock"],
     githubUrl: "https://github.com/Clarksonbr/ai-automation-hub",
